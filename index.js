@@ -25,7 +25,7 @@ express.use(require("./structure/matchmaking.js"));
 express.use(require("./structure/cloudstorage.js"));
 express.use(require("./structure/mcp.js"));
 
-const port = process.env.PORT || 3551;
+const port = process.env.PORT || 8080;
 express.listen(port, () => {
     console.log("LawinServer started listening on port", port);
 
@@ -62,4 +62,5 @@ express.use((req, res, next) => {
         "originatingService": "any",
         "intent": "prod"
     });
+
 });
